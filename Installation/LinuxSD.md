@@ -73,11 +73,44 @@ ls
 #output
 b2260-jessie_developer_YYYYMMDD-X.img
 ```
+
+####**Step 7**: Flash Image onto SD Card
+
 **Checklist:**
 
 - SD card inserted into host computer
-- Recall SD Card device name from **Step 2**
-- Using the Terminal to copy b2260-jessie_developer_YYYYMMDD-X.img image file into SD card by ###**Step 8**: Prepare B2260 with SD card
+- Recall SD Card device name from [**Step 2**]()
+- Using the Terminal to copy b2260-jessie_developer_YYYYMMDD-X.img image file into SD card by running the following commands:
+
+**Execute:**
+
+```shell
+$ sudo dd if=b2260-jessie_developer_YYYYMMDD-X.img of=/dev/XXX bs=4M
+$ sudo sync
+```
+
+**Note:**
+
+- `if=b2260-jessie_developer_YYYYMMDD-X.img`: should match the name of the image that was downloaded.
+- `of=/dev/XXX`: XXX should match the name of the SD Card device name from **Step 2**. Be sure to use the device name without the partition name. For example, 'of=/dev/disk1'
+- If you get an error message "Resource Busy", you will need to unmount the SD card without removing it from the host computer.
+Option 1:
+  - In the Applications folder, find and click on the Utilities folder.
+  - Click on the Disk Utility program to run it
+  - Select the device that represents the SD card
+  - Click on `unmount` and leave the SD card in the computer
+  - Retry the '$ sudo dd if=b2260-jessie_developer_YYYYMMDD-X.img of=/dev/XXX bs=4M'
+
+  Option 2:
+  - In the terminal window, enter this command:
+```shell
+$ sudo umount /dev/<device name>
+```
+
+- This command will take some time to execute few minutes). Be patient and avoid tampering with the terminal until process has ended.
+- Once SD card is done flashing, remove from host computer and set aside for **Step 8** You may see a popup window that tells you the device is _Not readable by the operating system_. Ignore the message and remove the MicroSD card from the host computer.
+
+####**Step 8**: Prepare B2260 with SD card
 
 - Make sure B2260 is unplugged from power
 - Connect an HDMI monitor to the B2260 with an HDMI cable, and power on the monitor
