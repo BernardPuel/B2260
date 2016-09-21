@@ -29,11 +29,9 @@ Learn about your B2260 board as well as how to prepare and set up for basic use
 # Out of the Box
 The following subsections should describe how to get started with the B2260 using the release build shipped with the boards. The B2260 board is ready to use “out of the box”  and delivered micro SDCard is populated by a preinstalled version of Debian Linux distribution.
 
-<img src="../AdditionalDocs/Images/ST_B2260_Front_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Front_SD.png" width="324" height="385" />
-
-<img src="../AdditionalDocs/Images/ST_B2260_Angle_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Angle_SD.png" width="385" height="311" />
-
-<img src="../AdditionalDocs/Images/ST_B2260_Back_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Back_SD.png" width="344" height="385" />
+<img src="../AdditionalDocs/Images/ST_B2260_Front_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Front_SD.png" width="240" height="276" />
+<img src="../AdditionalDocs/Images/ST_B2260_Angle_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Angle_SD.png" width="276" height="240" />
+<img src="../AdditionalDocs/Images/ST_B2260_Back_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Back_SD.png" width="240" height="276" />
 ***
 ## Features
 
