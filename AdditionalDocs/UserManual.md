@@ -54,11 +54,9 @@ The following table lists its key features:
 ## What's in the Box
 The box contains a B2260 Development 96board, a power supply, a power supply adapter, a populated SDCard and a product instruction manual (quick start guide).
 
-<img src="../AdditionalDocs/Images/ST_B2260_Front_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Front_SD.png" width="324" height="385" />
-
-<img src="../AdditionalDocs/Images/ST_B2260_Angle_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Angle_SD.png" width="385" height="311" />
-
-<img src="../AdditionalDocs/Images/ST_B2260_Back_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Back_SD.png" width="344" height="385" />
+<img src="../AdditionalDocs/Images/ST_B2260_Front_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Front_SD.png" width="263" height="313" />
+<img src="../AdditionalDocs/Images/ST_B2260_Angle_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Angle_SD.png" width="313" height="252" />
+<img src="../AdditionalDocs/Images/ST_B2260_Back_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Back_SD.png" width="280" height="313" />
 
 [Back to top]()
 ***
