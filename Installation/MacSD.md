@@ -85,22 +85,24 @@ b2260-jessie_developer_YYYYMMDD-X.img
 **Execute:**
 
 ```shell
-$ sudo dd if=b2260-jessie_developer_YYYYMMDD-X.img of=/dev/XXX bs=4m
+$ sudo dd if=b2260-jessie_developer_YYYYMMDD-X.img of=/dev/XXX bs=4M
 $ sudo sync
 ```
 
 **Note:**
 
-- `if=b2260-jessie_developer_YYYYMMDD-X.img.img`: should match the name of the image that was downloaded.
+- `if=b2260-jessie_developer_YYYYMMDD-X.img`: should match the name of the image that was downloaded.
 - `of=/dev/XXX`: XXX should match the name of the SD Card device name from **Step 2**. Be sure to use the device name without the partition name. For example, 'of=/dev/disk1'
 - If you get an error message "Resource Busy", you will need to unmount the SD card without removing it from the host computer.
-  - Option 1:
+
+  Option 1:
   - In the Applications folder, find and click on the Utilities folder.
   - Click on the Disk Utility program to run it
   - Select the device that represents the SD card
   - Click on `unmount` and leave the SD card in the computer
-  - Retry the '$ sudo dd if=db410c_sd_install_Y.img of=/dev/XXX bs=4m'
-  - Option 2:
+  - Retry the '$ sudo dd if=b2260-jessie_developer_YYYYMMDD-X.img of=/dev/XXX bs=4M'
+
+  Option 2:
   - In the terminal window, enter this command:
 ```shell
 $ sudo umount /dev/<device name>
