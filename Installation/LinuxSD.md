@@ -1,13 +1,14 @@
 ## Linux Host
 
-This section show how to install an operating system to your B2260 using the SD Card method on a Linux host computer.
+This section describes the process for installing a new Operating System using the SD Card method on a Linux host machine.
+
 ***
 
 - **Step 1**: Prepare MicroSD card
 - **Step 2**: Find SD Card Device name
 - **Step 3**: Recall Download Location
 - **Step 4**: Unzip _SD Card Install Image_
-- **Step 5**: Go to directory with _SD Card Install Image_ folder using Terminal
+- **Step 5**: Go to directory with _SD Card Install Image_ directory via the commandline
 - **Step 6**: Locate SD Card Install Image
 - **Step 7**: Install Image onto SD Card
 - **Step 8**: Prepare B2260 with SD card
@@ -21,8 +22,7 @@ This section show how to install an operating system to your B2260 using the SD 
 
 ####**Step 2**: Find SD Card Device name
 
-- Use host computer
-- Open "Terminal" application
+- From the host computer open "Terminal" (or equivalent) application
 - Remove SD card from host computer and run the following command:
 ```shell
 $ lsblk
@@ -47,8 +47,7 @@ $ lsblk
 
 ####**Step 5**: Go to directory with _SD Card Install Image_ folder using Terminal
 
-- Use host computer
-- Open "Terminal" application
+- Open "Terminal" application on host machine
 - `cd` to the directory with your unzipped **SD Card Install Image**
 
 ```shell
@@ -79,7 +78,7 @@ b2260-jessie_developer_YYYYMMDD-X.img
 **Checklist:**
 
 - SD card inserted into host computer
-- Recall SD Card device name from [**Step 2**]()
+- Recall SD card device name from [**Step 2**]()
 - Using the Terminal to copy b2260-jessie_developer_YYYYMMDD-X.img image file into SD card by running the following commands:
 
 **Execute:**
@@ -94,7 +93,8 @@ $ sudo sync
 - `if=b2260-jessie_developer_YYYYMMDD-X.img`: should match the name of the image that was downloaded.
 - `of=/dev/XXX`: XXX should match the name of the SD Card device name from **Step 2**. Be sure to use the device name without the partition name. For example, 'of=/dev/disk1'
 - If you get an error message "Resource Busy", you will need to unmount the SD card without removing it from the host computer.
-Option 1:
+
+  Option 1:
   - In the Applications folder, find and click on the Utilities folder.
   - Click on the Disk Utility program to run it
   - Select the device that represents the SD card
@@ -107,15 +107,15 @@ Option 1:
 $ sudo umount /dev/<device name>
 ```
 
-- This command will take some time to execute few minutes). Be patient and avoid tampering with the terminal until process has ended.
-- Once SD card is done flashing, remove from host computer and set aside for **Step 8** You may see a popup window that tells you the device is _Not readable by the operating system_. Ignore the message and remove the MicroSD card from the host computer.
+- This command will take some time to execute (a few minutes). Be patient and avoid tampering with the terminal until process has ended.
+- Once SD card is done flashing, remove from host computer and set aside for **Step 8**. You may see a popup window that tells you the device is _Not readable by the operating system_. Ignore the message and remove the MicroSD card from the host computer.
 
 ####**Step 8**: Prepare B2260 with SD card
 
-- Make sure B2260 is unplugged from power
+- Make sure B2260 is powered off
 - Connect an HDMI monitor to the B2260 with an HDMI cable, and power on the monitor
 - Plug a USB keyboard and/or mouse into either of the two USB connectors on the B2260
 - Insert the microSD card into the B2260
-- Plug power adaptor into B2260, wait for board to boot up.
+- Apply power to B2260, wait for board to boot
 
 **Congratulations! You are now booting your newly installed operating system directly from SD card on the B2260!**

@@ -1,33 +1,35 @@
 # Getting Started
-Learn about your B2260 board as well as how to prepare and set up for basic use
+Learn about your B2260 board as well as how to prepare and set up for basic use.
 
-## Setup - What you will need
+## Setup - Hardware
 
-**Need**
+**Required**
 - [B2260](Insert B2260 96Boards.org landing page link here)
-   - Board based on the Cannes2-STiH410 Processor
+   - Board based on the Cannes2-STiH410 SoC
 - Power Supply
-   - 96Boards specifications requires a 12V / 5A Power supply ; Recommended : SUN-1200500 by SUNUP electronics.
-   -  a Jack adaptor ; Recommended :  https://www.96boards.org/products/accessories/power/
+   - 12V supply required, recommended minimum 2A
+   - For more info see: https://www.96boards.org/products/accessories/power/
 - USB Keyboard and Mouse
-   - With two USB-A connectors, all 96Boards can be equiped with
-   a full sized AZERTY keyboard and mouse
+   - 96board CE specification requires two USB-A connectors, thus all 96Boards can be simultaneously equipped with a keyboard and mouse without the need for an external USB hub
 - Monitor and HDMI Cable
-   -  96Board is  equiped with a full sized HDMI connector,
-   -  HDMI capable monitor or Standard TV, supported resolution up to 1080p60 is needed
-- MicroSD card  
-   - For booting board and for quick and easy switching between operating systems and extra storage. SDCard capacity is  2GB minimum.
+   -  96Boards are equiped with a full sized HDMI connector
+   -  HDMI capable monitors or TVs with resolutions up to 1080p60 are supported
+- MicroSD Card
+   - Used for storage and quick and easy switching between operating systems
+   - For standard Linaro images, SD cards are required to have be at least 4GB
 
 **Optional**
 - Ethernet cable
-   - For connecting to a network without using WiFi
+   - For connecting to networks without using WiFi
 - 96Boards UART Adapter Board
-   - For connecting to PC via serial link. Useful for debugging.
-   - Recommended : https://www.96boards.org/products/mezzanine/uarts/
+   - For connecting to PC via serial link (particuarlly useful for debugging the boot process)
+   - For more info see: https://www.96boards.org/products/mezzanine/uarts/
 
 ***
 # Out of the Box
-The following subsections should describe how to get started with the B2260 using the release build shipped with the boards. The B2260 board is ready to use “out of the box”  and delivered micro SDCard is populated by a preinstalled version of Debian Linux distribution.
+The following subsections describe how to get started with the B2260 using the release build shipped with the board.
+
+The B2260 is supplied with Micro SD card containig a preinstalled version of Debian, thus should be ready to use out-of-the-box.
 
 <img src="../AdditionalDocs/Images/ST_B2260_Front_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Front_SD.png" width="240" height="276" />
 <img src="../AdditionalDocs/Images/ST_B2260_Angle_SD.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Angle_SD.png" width="276" height="240" />
@@ -37,46 +39,48 @@ The following subsections should describe how to get started with the B2260 usin
 
 |   Component          |   Description|
 |:---------------------|:-------------------------------------------------------------------------------------------------|
-|  SoC                 | Cannes2-STiH410 EJG|
+|  SoC                 | Cannes2-STiH410 EJG |
 |  CPU                 | Dual ARMcortex-A9 @ 1.5 GHz |
-|  GPU                 | ARM Mali 400 GPU @ 355 MHz|
-|  RAM                 | 2 x (DDR3 16-bit 500MB)|
-|  PMU                 | None|
-|  Storage             | MicroSD card slot , SPI NOR |
-|  Ethernet Port       | Up to 1 GB|
-|  Wireless            | Wi-Fi 802.11 g/n  , Bluetooth 4.0 LE|
-|  USB                 | 2 x USB2.0 Host (TypeA), 1x USB3.0 DRD Salve (Type micro AB), 1 x USB 2.0 host (on high-speed expansion connector)|
-|  Display             | 1 x HDMI 1.4 up to 1080p60 (TypeA)|
-|  Video               | Software video codecs|
-|  Audio               | outputs on HDMI and PCM/I2S (via Low-speed expansion connector)|
-|  Camera              | None|
-|  Expansion Interface | 40 pin Low-speed expansion connector (12 x GPIO, 1 UART 4 wires, 1 UART 2 wires, 2 x I2C, 1 PCM/I2S, 1 SPI, 1 Fan Ctrl, reset  button);  60 pin High-speed expansion connector (1x USB, 2 x I2C, 1x SPI, 1x SD interface) |
-|  LED                 | 1 x WiFi activity LED（Yellow）, 1 x BT activity LED (Blue),4 x User LEDs (Green)|
-|  Button              | Reset
-|  Power Source        | 12V , 5A, Plug specification is inner diameter 1.7mm and outer diameter 4.8mm |
-|  OS Support          | Linux based on Debian ; Linux based on OpenEmbedded|
-|  Size                | 85mm x 100mm|
+|  GPU                 | ARM Mali 400 GPU @ 355 MHz |
+|  RAM                 | 2 x (DDR3 16-bit 500MB) |
+|  PMU                 | None |
+|  Storage             | Built-in MicroSD card reader |
+|  Ethernet Port       | Up to 1 Gb/s |
+|  Wireless            | Wi-Fi 802.11 g/n, Bluetooth 4.0 LE |
+|  USB                 | 2 x USB2.0 Host (TypeA), 1x USB3.0 DRD Salve (Type micro AB), 1 x USB 2.0 host (on high-speed expansion connector) |
+|  Display             | 1 x HDMI 1.4 up to 1080p60 (TypeA) |
+|  Video               | Software video codecs |
+|  Audio               | HDMI and PCM/I2S (via Low-speed expansion connector) |
+|  Camera              | None |
+|  Expansion Interface | 40 pin Low-speed expansion connector (12 x GPIO, 1 UART 4 wires, 1 UART 2 wires, 2 x I2C, 1 PCM/I2S, 1 SPI, 1 fan ctrl, reset  button);  60 pin High-speed expansion connector (1x USB, 2 x I2C, 1x SPI, 1x SD interface) |
+|  LED                 | 1 x WiFi activity LED (yellow, 1 x BT activity LED (blue), 4 x User LEDs (green) |
+|  Button              | Reset |
+|  Power Source        | 12V, 2A (min), Plug specification is inner diameter 1.7mm and outer diameter 4.8mm |
+|  OS Support          | Linux based on Debian, Linux based on OpenEmbedded |
+|  Size                | 85mm x 100mm |
 
 **IMPORTANT NOTES**
-
 
 - HDMI EDID display data is used to determine the best display resolution. On monitors and TVs that support 1080p (or 1200p) this resolution will be selected. If 1080p is not supported the next available resolution reported by EDID will be used. This selected mode will work with most but not all monitors/TVs.
 ***
 
 ## Starting the board for the first time
-Micro SDCard comes preloaded with Debian Linux and can be up and running with a few simple steps:
+MicroSD card comes preloaded with Debian Linux and can be up and running with a few simple steps:
 
-- Connect the B2260 to your display with the HDMI cable. It is important to do this first because the monitor will not detect the board if it is connected after starting. Ensure that the source for the display is switched to the HDMI port you are using
-- Connect the USB keyboard and mouse using USB ports type A.
-- Insert the populated Micro SDCard the B2260.
+- Connect the B2260 to your display with the HDMI cable
+  - It is important to do this first because the monitor will not detect the board if it is connected after starting
+  - Ensure that the source for the display is switched to the HDMI port you are using
+- Connect the USB keyboard and mouse to the USB Type-A connectors
+- Insert the populated Micro SD card
 
 > Note: The above setup will cause B2260 Board to Auto Power up when it is plugged into power
 
-- Connect the power supply to the B2260. The board will begin to boot Debian Linux after **X (to be updated)** s.
+- Connect the power supply to the B2260
+  - The board will begin to boot Debian Linux after a few seconds
 
 ***
 
-## Updating to a new release or change your operating system
+## Updating to a new release or changing your Operating System
 
 <Do not touch this section>
 

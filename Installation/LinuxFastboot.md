@@ -1,2 +1,2 @@
 ## Linux Host
- Not Applicable => to be delete
+ Not Applicable => to be deleted
