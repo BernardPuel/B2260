@@ -80,7 +80,7 @@ The box contains a B2260 Development 96board, a power supply, a power supply ada
 |    9     | Low Speed Expansion Connector                             |
 |    10    | WiFi/Bluetooth                                            |
 |    11    | Power Outlet                                              |
-|    12    | Reset Button                                             |
+|    12    | Reset Button                                              |
 |    13    | Bluetooth/WiFi Antenna                                    |
 
 <img src="../AdditionalDocs/Images/ST_B2260_Back_SD_placement.png" data-canonical-src="./AdditionalDocs/Images/ST_B2260_Back_SD_Placement.png" width="348" height="385" />
@@ -90,8 +90,8 @@ The box contains a B2260 Development 96board, a power supply, a power supply ada
 |    14    | SATA connector                                            |
 |    15    | RJ45 connector                                            |
 |    16    | JTAG connector                                            |
-|    17    |  ST Cannes2-STiH410 Soc **+ 1GB LPDDR3  AP Calixte??**              |
-
+|    17    | ST Cannes2-STiH410 Soc                                    |
+|    18    | 2x16b 1GB LPDDR3                                          |
 
 [Back to top]()
 
